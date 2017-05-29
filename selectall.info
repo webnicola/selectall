@@ -1,0 +1,5 @@
+name = Select all
+description = Adds link to select all items in the select tag with multiple attribute
+core = 7.x
+
+scripts[] = /js/selectall.js

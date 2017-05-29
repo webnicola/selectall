@@ -1,0 +1,12 @@
+<?php
+/**
+ * hook_field_widget_WIDGET_TYPE_form_alter
+ * https://api.drupal.org/api/drupal/modules%21field%21field.api.php/function/hook_field_widget_WIDGET_TYPE_form_alter/7.x
+ */
+function selectall_field_widget_options_select_form_alter(&$element, &$form_state, $context) {
+  // Add a css class to widget form elements for all fields of type mytype.
+  if ($element['#type'] == 'select' && $element['#multiple']) {
+    // Be sure not to overwrite existing attributes.
+    $element['#description'] = '<a href="#" class="selec-all">' . t('Select all') . '</a> - <a href="#" class="unselec-all">' . t('Unselect all') . '</a>';
+  }
+}
